@@ -18,9 +18,10 @@ import androidx.compose.ui.Modifier
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DynamicSelectTextField(
+fun DynamicSelectedField(
     selectedValue: String,
     options: List<String>,
+    label: String,
     onValueChangedEvent: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -35,7 +36,7 @@ fun DynamicSelectTextField(
             readOnly = true,
             value = selectedValue,
             onValueChange = {},
-            label = { Text(text = "Label") },
+            label = { Text(text = label) },
             trailingIcon = {
                 ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded)
             },
