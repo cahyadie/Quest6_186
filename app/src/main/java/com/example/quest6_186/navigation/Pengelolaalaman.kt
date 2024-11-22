@@ -12,6 +12,7 @@ import com.example.latihanmvvm.ui.view.screen.MahasiswaFormView
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.latihanmvvm.ui.view.screen.RencanaStudyView
 import com.example.quest6_186.ui.view.screen.Splashview
+import com.example.quest6_186.ui.view.screen.TampilView
 import com.example.quest6_186.ui.view.viewmodel.MahasiswaViewModel
 import com.example.quest6_186.ui.view.viewmodel.RencanaStudyViewModel
 
@@ -31,7 +32,7 @@ fun MahasiswaApp(
     viewModel: MahasiswaViewModel = viewModel(),
     navController: NavHostController = rememberNavController()
 ){
-    val uiState = viewModel.statusUI.collectAsState()
+    val uiState = krsViewModel.krsStateUi.collectAsState().value
     val mahasiswaUiState = mahasiswaViewModel.statusUI.collectAsState().value
 
 
@@ -60,6 +61,13 @@ fun MahasiswaApp(
                 onSubmitButtonClicked ={krsViewModel.saveDataKRS(it)
                     navController.navigate(Halaman.Tampil.name)}
                 )
+        }
+
+        composable(route = Halaman.Tampil.name){
+            TampilView(mahasiswa = mahasiswaUiState,
+                krs = uiState,
+                onResetButtonClicked = {navController.navigate(Halaman.Splash.name)},
+                onBackButtonClicked = {navController.popBackStack()})
             }
     }
 }
