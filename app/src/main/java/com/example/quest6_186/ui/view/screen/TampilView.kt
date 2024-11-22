@@ -40,53 +40,71 @@ fun TampilView(
         Spacer(modifier = Modifier.padding(top = 14.dp))
         Row(modifier = Modifier.padding(14.dp),
             verticalAlignment = Alignment.CenterVertically) {
-            Image(painter = painterResource(id = R.drawable.umy), contentDescription = "",
-                modifier = Modifier.size(40.dp))
+            Image(
+                painter = painterResource(id = R.drawable.umy), contentDescription = "",
+                modifier = Modifier.size(40.dp)
+            )
             Spacer(modifier = Modifier.padding(start = 14.dp))
             Column {
-                Text(text = "KRS MAHASISWA",
+                Text(
+                    text = "KRS MAHASISWA",
                     color = Color.White,
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Bold
                 )
-                Text(text = "Universitas Muhammadiyah Yogyakarta",
+                Text(
+                    text = "Universitas Muhammadiyah Yogyakarta",
                     color = Color.White,
                     fontSize = 12.sp,
-                    fontWeight = FontWeight.Bold)
+                    fontWeight = FontWeight.Bold
+                )
             }
-            Column (
+            Column(
                 modifier = Modifier
                     .fillMaxSize()
                     .background(Color.White)
                     .padding(14.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
-            ){
-                Row (
+            ) {
+                Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Column {
-                        Text(text = "Nim :",
+                        Text(
+                            text = "Nim :",
                             fontWeight = FontWeight.Bold,
-                            fontSize = 16.sp)
-                        Text(text = mahasiswa.nim,
+                            fontSize = 16.sp
+                        )
+                        Text(
+                            text = mahasiswa.nim,
                             fontWeight = FontWeight.Light,
-                            fontSize = 16.sp)
-                        Text(text = "Nama :",
+                            fontSize = 16.sp
+                        )
+                        Text(
+                            text = "Nama :",
                             fontWeight = FontWeight.Bold,
-                            fontSize = 16.sp)
-                        Text(text = mahasiswa.nama,
+                            fontSize = 16.sp
+                        )
+                        Text(
+                            text = mahasiswa.nama,
                             fontWeight = FontWeight.Light,
-                            fontSize = 16.sp)
-                        Text(text = "Email :",
+                            fontSize = 16.sp
+                        )
+                        Text(
+                            text = "Email :",
                             fontWeight = FontWeight.Bold,
-                            fontSize = 16.sp)
-                        Text(text = mahasiswa.email,
+                            fontSize = 16.sp
+                        )
+                        Text(
+                            text = mahasiswa.email,
                             fontWeight = FontWeight.Light,
-                            fontSize = 16.sp)
+                            fontSize = 16.sp
+                        )
                     }
                 }
 
             }
+        }
     }
 }
