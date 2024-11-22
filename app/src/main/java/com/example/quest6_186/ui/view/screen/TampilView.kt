@@ -60,84 +60,84 @@ fun TampilView(
                     fontWeight = FontWeight.Bold
                 )
             }
-            Column(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .background(Color.White)
-                    .padding(14.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
+    }
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.White)
+                .padding(14.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween
-                ) {
-                    Column {
-                        Text(
-                            text = "Nim :",
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 16.sp
-                        )
-                        Text(
-                            text = mahasiswa.nim,
-                            fontWeight = FontWeight.Light,
-                            fontSize = 16.sp
-                        )
-                        Text(
-                            text = "Nama :",
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 16.sp
-                        )
-                        Text(
-                            text = mahasiswa.nama,
-                            fontWeight = FontWeight.Light,
-                            fontSize = 16.sp
-                        )
-                        Text(
-                            text = "Email :",
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 16.sp
-                        )
-                        Text(
-                            text = mahasiswa.email,
-                            fontWeight = FontWeight.Light,
-                            fontSize = 16.sp
-                        )
-                    }
-                }
-                Spacer(modifier = Modifier.padding(14.dp))
-                Column(modifier = Modifier.fillMaxWidth()) {
+                Column {
                     Text(
-                        text = "MataKuliah peminatan yang dipilih :",
+                        text = "Nim :",
                         fontWeight = FontWeight.Bold,
                         fontSize = 16.sp
                     )
                     Text(
-                        text = krs.namaMK,
+                        text = mahasiswa.nim,
                         fontWeight = FontWeight.Light,
                         fontSize = 16.sp
                     )
                     Text(
-                        text = "Kelas :",
+                        text = "Nama :",
                         fontWeight = FontWeight.Bold,
                         fontSize = 16.sp
                     )
                     Text(
-                        text = krs.kelas,
+                        text = mahasiswa.nama,
+                        fontWeight = FontWeight.Light,
+                        fontSize = 16.sp
+                    )
+                    Text(
+                        text = "Email :",
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 16.sp
+                    )
+                    Text(
+                        text = mahasiswa.email,
                         fontWeight = FontWeight.Light,
                         fontSize = 16.sp
                     )
                 }
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceEvenly
-                ) {
-                    Button(onClick = { onBackButtonClicked() }) {
-                        Text(text = "Kembali")
-                    }
-                    Button(onClick = { onResetButtonClicked() }) {
-                        Text(text = "Reset")
+            }
+            Spacer(modifier = Modifier.padding(14.dp))
+            Column(modifier = Modifier.fillMaxWidth()) {
+                Text(
+                    text = "MataKuliah peminatan yang dipilih :",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp
+                )
+                Text(
+                    text = krs.namaMK,
+                    fontWeight = FontWeight.Light,
+                    fontSize = 16.sp
+                )
+                Text(
+                    text = "Kelas :",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp
+                )
+                Text(
+                    text = krs.kelas,
+                    fontWeight = FontWeight.Light,
+                    fontSize = 16.sp
+                )
+            }
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceEvenly
+            ) {
+                Button(onClick = { onBackButtonClicked() }) {
+                    Text(text = "Kembali")
+                }
+                Button(onClick = { onResetButtonClicked() }) {
+                    Text(text = "Reset")
 
-                    }
                 }
             }
         }
